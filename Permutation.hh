@@ -51,7 +51,11 @@ public:
     }
   }
 
-  Permutation( std::initializer_list< std::pair< Element, Element > > transitions )
+  Permutation( std::initializer_list<
+                                      std::pair<
+                                                 Element,
+                                                 Element  >
+                                                            > transitions )
   : Permutation(  )
   {
     for( auto [ source, destination ] : transitions )
