@@ -40,6 +40,20 @@ private:
     return true;
   }
 
+  bool injectiveness(  )
+  {
+    for( std::set< Element > destinations;
+         Element element : set )
+    {
+      if( false == destinations.insert( operator()( element ) ).second )
+      {
+        return false;
+      }
+    }
+
+    return true;
+  }
+
 public:
   Permutation(  )
   {
