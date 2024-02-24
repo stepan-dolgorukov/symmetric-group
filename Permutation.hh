@@ -58,6 +58,14 @@ public:
                                                             > transitions )
   : Permutation(  )
   {
+    for( std::set< Element > sources,
+                             destinations;
+         auto [ source, destination ] : transitions )
+    {
+      assert( true == sources.insert( source ).second );
+      assert( true == destinations.insert( destination ).second );
+    }
+
     for( auto [ source, destination ] : transitions )
     {
       m[ source ] = destination;
