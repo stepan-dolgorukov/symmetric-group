@@ -99,6 +99,9 @@ public:
       assert( element_of_set( source ) &&
               element_of_set( destination ) );
     }
+
+    assert( true == injectiveness(  ) &&
+            true == surjectiveness(  ) );
   }
 
   Element operator()( Element q )
