@@ -88,4 +88,11 @@ public:
               element_of_set( destination ) );
     }
   }
+
+  Element operator()( Element q )
+  {
+    assert( element_of_set( q ) );
+
+    return m.at( q );
+  }
 };
