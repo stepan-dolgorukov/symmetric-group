@@ -4,6 +4,7 @@ template< typename Element,
 class Permutation
 {
 private:
+  decltype( set ) s = set;
   Map< Element, Element > m;
 
 public:
