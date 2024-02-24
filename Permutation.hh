@@ -1,4 +1,5 @@
 #include <set>
+#include <utility>
 
 template< typename Element,
           auto set,
@@ -50,9 +51,10 @@ public:
     }
   }
 
-  Permutation( Map< Element, Element > map ) : Permutation(  )
+  Permutation( std::initializer_list< std::pair< Element, Element > > transitions )
+  : Permutation(  )
   {
-    for( auto [ source, destination ] : map )
+    for( auto [ source, destination ] : transitions )
     {
       m[ source ] = destination;
 
