@@ -54,6 +54,18 @@ private:
     return true;
   }
 
+  bool surjectiveness(  )
+  {
+    std::set< Element > destinations;
+
+    for( Element element : set )
+    {
+      destinations.insert( operator()( element ) );
+    }
+
+    return set.size(  ) == destinations.size(  );
+  }
+
 public:
   Permutation(  )
   {
