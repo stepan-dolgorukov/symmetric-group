@@ -1,3 +1,5 @@
+#include <set>
+
 template< typename Element,
           auto set,
           template< typename, typename > typename Map >
@@ -20,9 +22,28 @@ private:
     return false;
   }
 
+  bool without_repeating_elements(  )
+  {
+    std::set< Element > s;
+
+    for( auto element : set )
+    {
+      if( 1u == s.count( element ) )
+      {
+        return false;
+      }
+
+      s.insert( element );
+    }
+
+    return true;
+  }
+
 public:
   Permutation(  )
   {
+    assert( without_repeating_elements(  ) );
+
     for( Element element : set )
     {
       m[ element ] = element;
