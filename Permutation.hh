@@ -25,9 +25,8 @@ private:
 
   bool without_repeating_elements(  )
   {
-    std::set< Element > s;
-
-    for( auto element : set )
+    for( std::set< Element > s;
+         auto element : set )
     {
       if( 1u == s.count( element ) )
       {
