@@ -11,7 +11,7 @@ private:
 
   bool element_of_set( Element q )
   {
-    for( auto element : set )
+    for( Element element : set )
     {
       if( q == element )
       {
