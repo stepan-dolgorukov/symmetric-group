@@ -7,7 +7,6 @@ template< typename Element,
 class Permutation
 {
 private:
-  decltype( set ) s = set;
   Map< Element, Element > m;
 
   bool element_of_set( Element q )
