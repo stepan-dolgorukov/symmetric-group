@@ -102,7 +102,7 @@ public:
             true == surjectiveness(  ) );
   }
 
-  Element operator()( Element q )
+  Element operator()( const Element q )
   {
     assert( element_of_set( q ) );
 
