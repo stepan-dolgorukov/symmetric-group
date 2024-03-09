@@ -75,11 +75,11 @@ public:
     }
   }
 
-  Permutation( std::initializer_list<
-                                      std::pair<
-                                                 Element,
-                                                 Element  >
-                                                            > transitions )
+  Permutation( std::vector<
+                            std::pair<
+                                       Element,
+                                       Element  >
+                                                  > transitions )
   : Permutation(  )
   {
     for( std::set< Element > sources,
