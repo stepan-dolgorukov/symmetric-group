@@ -108,4 +108,26 @@ public:
 
     return m.at( q );
   }
+
+  template< typename Permutation >
+  auto operator*( Permutation q )
+  {
+    static_assert( std::is_same_v< Permutation,
+                                   std::decay_t< decltype( *this ) >
+                                                                     >
+                                                                       );
+
+    std::vector<
+                 std::pair<
+                            Element,
+                            Element  >
+                                       > r;
+
+    for( auto [ source, destination ] : m )
+    {
+      r.push_back( { source, q( destination ) } );
+    }
+
+    return std::decay_t< decltype( *this ) >( r );
+  }
 };
