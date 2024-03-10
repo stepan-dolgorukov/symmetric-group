@@ -9,7 +9,8 @@ class Permutation
 private:
   Map< Element, Element > m;
 
-  bool element_of_set( Element q )
+  bool
+  element_of_set( Element q )
   {
     for( Element element : set )
     {
@@ -22,7 +23,8 @@ private:
     return false;
   }
 
-  bool without_repeating_elements(  )
+  bool
+  without_repeating_elements(  )
   {
     for( std::set< Element > s;
          auto element : set )
@@ -38,7 +40,8 @@ private:
     return true;
   }
 
-  bool injectiveness(  )
+  bool
+  injectiveness(  )
   {
     for( std::set< Element > destinations;
          Element element : set )
@@ -52,7 +55,8 @@ private:
     return true;
   }
 
-  bool surjectiveness(  )
+  bool
+  surjectiveness(  )
   {
     std::set< Element > destinations;
 
@@ -102,7 +106,8 @@ public:
             true == surjectiveness(  ) );
   }
 
-  Element operator()( const Element q )
+  Element
+  operator()( const Element q )
   {
     assert( element_of_set( q ) );
 
@@ -110,7 +115,8 @@ public:
   }
 
   template< typename Permutation >
-  auto operator*( Permutation q )
+  auto
+  operator*( Permutation q )
   {
     static_assert( std::is_same_v< Permutation,
                                    std::decay_t< decltype( *this ) >
