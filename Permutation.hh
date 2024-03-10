@@ -128,6 +128,6 @@ public:
       r.push_back( { source, q( destination ) } );
     }
 
-    return std::decay_t< decltype( *this ) >( r );
+    return Permutation( r );
   }
 };
