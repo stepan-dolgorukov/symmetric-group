@@ -115,7 +115,7 @@ public:
   }
 
   template< typename Permutation >
-  auto
+  Permutation
   operator*( Permutation q )
   {
     static_assert( std::is_same_v< Permutation,
