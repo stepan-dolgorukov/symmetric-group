@@ -135,7 +135,7 @@ public:
 
     for( auto [ source, destination ] : m )
     {
-      r.push_back( { source, q( destination ) } );
+      r.emplace_back( source, q( destination ) );
     }
 
     return Permutation( r );
