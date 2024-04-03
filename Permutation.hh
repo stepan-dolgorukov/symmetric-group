@@ -133,7 +133,7 @@ public:
                             Element  >
                                        > r;
 
-    for( auto [ source, destination ] : m )
+    for( const auto [ source, destination ] : m )
     {
       r.emplace_back( source, q( destination ) );
     }
