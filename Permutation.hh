@@ -120,7 +120,7 @@ public:
 
   template< typename Permutation >
   Permutation
-  operator*( Permutation q )
+  operator*( Permutation q ) const
   {
     static_assert( std::is_same_v< Permutation,
                                    std::decay_t< decltype( *this ) >
