@@ -6,7 +6,8 @@
 
 template< typename Element,
           auto set,
-          template< typename, typename > typename Map >
+          template< typename,
+                    typename  > typename Map >
 class Permutation
 {
 private:
