@@ -1,3 +1,6 @@
+#ifndef PERMUTATION_HH
+#define PERMUTATION_HH
+
 #include <set>
 #include <utility>
 
@@ -137,3 +140,5 @@ public:
     return Permutation( r );
   }
 };
+
+#endif
