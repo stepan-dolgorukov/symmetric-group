@@ -122,7 +122,8 @@ public:
   Permutation
   operator*( Permutation q ) const
   {
-    static_assert( std::is_same_v< Permutation,
+    static_assert(
+                   std::is_same_v< Permutation,
                                    std::decay_t< decltype( *this ) >
                                                                      >
                                                                        );
