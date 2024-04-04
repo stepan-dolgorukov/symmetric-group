@@ -64,7 +64,7 @@ private:
   {
     std::set< Element > destinations;
 
-    for( Element element : set )
+    for( const Element element : set )
     {
       destinations.insert( operator()( element ) );
     }
@@ -77,7 +77,7 @@ public:
   {
     assert( without_repeating_elements(  ) );
 
-    for( Element element : set )
+    for( const Element element : set )
     {
       m[ element ] = element;
     }
